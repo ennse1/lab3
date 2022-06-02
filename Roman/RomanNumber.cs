@@ -19,7 +19,7 @@ namespace RomanNumbers
             if (n <= 0) throw new RomanNumberException($"Число {n} меньше либо равно 0");
             else this._number = n;
         }
-        //Сложение римских чисел
+
         public static RomanNumber operator +(RomanNumber? n1, RomanNumber? n2)
         {
             int num = n1._number + n2._number;
@@ -29,7 +29,7 @@ namespace RomanNumbers
                 return new RomanNumber((ushort)num);
             }
         }
-        //Вычитание римских чисел
+
         public static RomanNumber operator -(RomanNumber? n1, RomanNumber? n2)
         {
             int num = n1._number - n2._number;
@@ -39,7 +39,7 @@ namespace RomanNumbers
                 return new RomanNumber((ushort)num);
             }
         }
-        //Умножение римских чисел
+
         public static RomanNumber operator *(RomanNumber? n1, RomanNumber? n2)
         {
             int num = n1._number * n2._number;
@@ -50,7 +50,7 @@ namespace RomanNumbers
             }
         }
 
-        //Целочисленное деление римских чисел
+
         public static RomanNumber operator /(RomanNumber? n1, RomanNumber? n2)
         {
 
@@ -65,7 +65,7 @@ namespace RomanNumbers
                 }
             }
         }
-        //Возвращает строковое представление римского числа
+
         public override string ToString()
         {
             int tmp = _number;
@@ -98,7 +98,5 @@ namespace RomanNumbers
             else
                 throw new RomanNumberException("object is not a RomanNumber");
         }
-
     }
-
 }
