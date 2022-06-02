@@ -6,7 +6,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-
 namespace RomanNumbers.Tests
 {
     [TestClass()]
@@ -24,7 +23,6 @@ namespace RomanNumbers.Tests
             RomanNumber actual2 = romanNumber + romanNumber2;
             Assert.AreEqual(expected1.ToString(), actual1.ToString());
             Assert.AreEqual(expected2.ToString(), actual2.ToString());
-
         }
         [TestMethod()]
         public void Sub()
@@ -38,7 +36,6 @@ namespace RomanNumbers.Tests
 
             Assert.AreEqual(expected.ToString(), actual.ToString());
             Assert.ThrowsException<RomanNumberException>(() => (romanNumber - romanNumber2));
-
         }
         [TestMethod()]
         public void Div()
@@ -85,7 +82,6 @@ namespace RomanNumbers.Tests
             Assert.AreEqual(expected.ToString(), clone.ToString());
             Assert.AreNotSame(expected, clone);
         }
-
 
         [TestMethod()]
         public void CompareToTest()
